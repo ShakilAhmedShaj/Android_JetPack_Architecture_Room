@@ -22,6 +22,7 @@ import java.util.UUID;
 public class MainActivity extends AppCompatActivity {
 
     private static final int NEW_NOTE_ACTIVITY_REQUEST_CODE = 1;
+    public static final int UPDATE_NOTE_ACTIVITY_REQUEST_CODE = 2;
     private String TAG = this.getClass().getSimpleName();
     private NoteViewModel noteViewModel;
     private NoteListAdapter noteListAdapter;
@@ -72,6 +73,19 @@ public class MainActivity extends AppCompatActivity {
                     getApplicationContext(),
                     R.string.saved,
                     Toast.LENGTH_LONG).show();
+        } else if (requestCode == UPDATE_NOTE_ACTIVITY_REQUEST_CODE && resultCode == RESULT_OK) {
+
+            // Code to update the note
+            Note note = new Note(
+                    data.getStringExtra(EditNoteActivity.NOTE_ID),
+                    data.getStringExtra(EditNoteActivity.UPDATED_NOTE));
+            noteViewModel.update(note);
+
+            Toast.makeText(
+                    getApplicationContext(),
+                    R.string.updated,
+                    Toast.LENGTH_LONG).show();
+
         } else {
             Toast.makeText(
                     getApplicationContext(),

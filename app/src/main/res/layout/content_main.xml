@@ -16,5 +16,4 @@
         android:background="@android:color/darker_gray"
         tools:listitem="@layout/list_item" />
 
-
 </android.support.constraint.ConstraintLayout>
