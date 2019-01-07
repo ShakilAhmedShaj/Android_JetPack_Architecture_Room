@@ -5,12 +5,6 @@ import android.arch.persistence.room.Room;
 import android.arch.persistence.room.RoomDatabase;
 import android.content.Context;
 
-
-/**
- * Created by Shakil Ahmed Shaj on 07-Jan-19.
- * shakilahmedshaj@gmail.com
- */
-
 @Database(entities = Note.class, version = 1)
 public abstract class NoteRoomDatabase extends RoomDatabase {
 
