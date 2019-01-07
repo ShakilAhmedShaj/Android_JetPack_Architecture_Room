@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">Android_JetPack_Architecture_Room</string>
+    <string name="app_name">Android Architecture Room</string>
+    <string name="action_settings">Settings</string>
 </resources>
